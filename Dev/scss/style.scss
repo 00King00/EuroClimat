@@ -15,3 +15,148 @@
 		@media (max-width: 37.5em)  { @content ; }
 	}
 }
+
+
+.footer{
+	padding: 38px 0 0 0;
+	font-size: 14px;
+	background-color: #f7f7f9;
+	
+	&__container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		
+	}
+	.footer__container{
+		margin-bottom: 55px;
+	}
+	&-column{
+		display: inline-block;
+		&_catalog{
+			//flex-grow: 1;
+			max-width: 190px;
+		}
+		&_info{
+			//flex-grow: 1;
+			max-width: 190px;
+			@include breakpoint(mobileonly){
+				width: 160px;
+			}
+		}
+		&_phone{
+			//flex-grow: 1;
+			max-width: 200px;
+			@include breakpoint(mobileonly){
+				width: 50%;
+				max-width: 160px;
+			}
+			@include breakpoint(desktop){
+				padding-right:  140px;
+				max-width: 340px;
+			}
+			
+		}
+		&_payment-adress{
+			//flex-grow: 4;
+			max-width: 330px;
+			@include breakpoint(mobileonly){
+				width: 50%;
+			}
+			@include breakpoint(desktop){
+				margin-right: 200px;
+			}
+			
+		}
+	}
+	&__title{
+		font-family: "robotobold";
+		font-size: 15px;
+		text-transform: uppercase;
+		color: black;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	&__text{
+		font-family: "robotolight";
+		font-size: 12px;
+		color: #6e6e6e;
+		line-height: 1.55;
+		&_adress{
+			font-size: 14px;
+		}
+	}
+	&__payment{
+		display: inline-flex;
+		align-items: center;
+		height: 35px;
+		margin: 20px 0 40px 0;
+		li{
+			display: inline-block;
+			margin-right: 20px;
+
+		}
+	}
+	&__number-box{
+		margin: 10px 0 20px 0;
+	}
+	&__number{
+		font-size: 20px;
+		line-height: 1.1;
+		span{
+			
+			&:first-child{
+				font-family: "robotolight";
+				
+			}
+			&:last-child{
+				font-family: "robotobold";
+				color: black;
+				font-weight: bold;
+			}
+		}
+	}
+	li{
+		a{
+			font-size: 14px;
+			font-family: "robotoregular";
+			color: #7d7d7d;
+			line-height: 2;
+		}
+	}
+	&-rights{
+		color: #8a8a8a;
+		font-size: 12px;
+		text-align: center;
+		padding: 15px 0;
+		@include breakpoint(tablet){
+			text-align: left;
+			display: inline-block;
+		}
+	}
+	&__design-autor{
+		display: none;
+		color: #8a8a8a;
+		@include breakpoint(tablet){
+			display: inline-block;
+			float: right;
+			font-size: 12px;
+			padding: 15px 0;
+			
+		}
+		a{
+			text-decoration: underline;
+			padding-left: 2px;
+			color: #8a8a8a;
+		}
+	}
+	
+	hr{
+		display: block;
+		color: #d4d8db;
+		height: 1px;
+		border: none;
+		background: #d4d8db;
+	}
+
+}
